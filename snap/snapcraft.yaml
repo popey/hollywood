@@ -11,12 +11,28 @@ grade: stable
 
 parts:
   hollywood:
-    plugin: nil
-    stage-packages: [hollywood]
-    stage:
-        - -bin/hollywood
-    snap:
-        - -bin/hollywood
+    plugin: dump
+    source: .
+    organize:
+      'bin/hollywood': 'usr/bin/'
+      'lib/hollywood': 'usr/lib/'
+      'share/hollywood': 'usr/share/'
+    stage-packages:
+      - byobu
+      - apg
+      - bmon
+      - bsdmainutils
+      - ccze
+      - cmatrix
+      - htop
+      - jp2a
+      - mlocate
+      - moreutils
+      - mplayer
+      - openssh-client
+      - speedometer
+      - tree
+      - vim
 
 apps:
    hollywood:
